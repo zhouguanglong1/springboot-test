@@ -2,6 +2,13 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -9,12 +16,5 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	
-	@RequestMapping(value = "/test" ,method = RequestMethod.POST)
-	@ResponseBody
-    	public Map<String,Object> todayInvokingStat(@RequestBody Map<String,Object> req) throws Exception{
-        	Map<String,Object> result = new HashMap<>();
-		result.put("name","hello,I'm v1!");
-        return result;
-    }
+
 }
