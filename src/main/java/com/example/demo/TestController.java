@@ -14,7 +14,7 @@ public class TestController {
     @GetMapping(value = "/test")
     public Map<String,Object> todayInvokingStat() throws Exception{
         Map<String,Object> result = new HashMap<>();
-        result.put("name","hello,I'm v1!");
+        result.put("name","hello,I'm v1.0.3!");
         return result;
     }
 }
